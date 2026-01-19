@@ -5,9 +5,9 @@ import { Button } from './components/ui/button.jsx'
 function App() {
   return (
     <>
-    <main className='bg-background'>
+    <main className='dark bg-background min-h-screen'>
       <Button>shadcn</Button>
-
+       
     </main>
     </>
   )
