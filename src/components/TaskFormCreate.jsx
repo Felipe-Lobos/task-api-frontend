@@ -8,33 +8,15 @@ import { Controller } from "react-hook-form";
 
 function TaskFormCreate() {
   const {
-    isLoading,
-    isError,
     onSubmit,
     control,
     isPendingMutation,
     formState: { errors },
   } = useTaskForm();
 
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center py-12">
-        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-      </div>
-    );
-  }
-
-  if (isError) {
-    return (
-      <div className="text-center py-12 text-destructive">
-        Error al cargar las tareas. Verifica la conexion con la API.
-      </div>
-    );
-  }
+  
 
   return (
-    <div className="space-y-6">
-      {/* Formulario para agregar tarea */}
       <Card>
         <CardHeader>
           <CardTitle className="text-lg">Nueva Tarea</CardTitle>
@@ -87,7 +69,6 @@ function TaskFormCreate() {
           </form>
         </CardContent>
       </Card>
-    </div>
   );
 }
 

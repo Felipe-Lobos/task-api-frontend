@@ -7,6 +7,7 @@ export const useTasks = () => {
   const {
     data: tasks,
     isLoading,
+    isError,
     error,
   } = useQuery({
     queryKey: ["tasks"],
@@ -41,6 +42,7 @@ export const useTasks = () => {
   return {
     tasks,
     isLoading,
+    isError,
     error,
     createTask,
     updateTask,
