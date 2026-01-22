@@ -24,7 +24,8 @@ export const useTasks = () => {
   });
 
   const updateTask = useMutation({
-    mutationFn: ({ id, ...task }) => taskApi.update(id, task),
+    mutationFn: ({ id, title, description, completed }) => 
+      taskApi.update(id, { title, description, completed }),
     onSuccess: () => {
       queryClient.invalidateQueries(["tasks"]);
     },
